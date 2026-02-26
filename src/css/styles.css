@@ -1,0 +1,253 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+/* Common styles */
+@import url('./reset.css');
+@import url('./base.css');
+@import url('./container.css');
+@import url('./animations.css');
+
+/* Sections style */
+@import url('./header.css');
+@import url('./vite-promo.css');
+@import url('./badges.css');
+@import url('./back-link.css');
+@import url('./footer.css');
+
+/* ========== Base ========== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  background: #fff;
+  color: #2e2f42;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ========== Form (макет) ========== */
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 36px 16px 32px;
+}
+
+.form label {
+  display: block;
+}
+
+.form input {
+  width: 272px;
+  height: 40px;
+  padding: 8px 16px;
+
+  border: 1px solid #808080;
+  border-radius: 4px;
+  outline: transparent;
+
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+
+  color: #2e2f42;
+  background: #fff;
+}
+
+.form input::placeholder {
+  color: #808080;
+}
+
+.form input:hover {
+  border-color: #000000;
+}
+
+.form input:focus {
+  border-color: #4e75ff;
+}
+
+.form button {
+  width: 91px;
+  /* як на скріні */
+  height: 40px;
+  padding: 8px 16px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #4e75ff;
+  color: #ffffff;
+
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: background-color 200ms ease;
+}
+
+.form button:hover {
+  background: #6c8cff;
+  /* hover з макету */
+}
+
+/* ========== Loader position ========== */
+.loader {
+  display: block;
+  margin: 0 auto 24px;
+}
+
+.is-hidden {
+  display: none;
+}
+
+/* ========== Gallery Grid ========== */
+.gallery {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0 16px 24px;
+  max-width: 1200px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 24px;
+}
+
+/* ========== Card (360x200 + stats 48) ========== */
+.gallery-item {
+  border: 1px solid #808080;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.gallery-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 200px;
+  /* 360x200 */
+  object-fit: cover;
+}
+
+/* нижній блок 360x48 */
+.info {
+  height: 48px;
+  /* як на скріні */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 14px;
+  border-top: 1px solid #808080;
+}
+
+/* 4 колонки */
+.info-item {
+  margin: 0;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+
+  color: #2e2f42;
+}
+
+.info-item b {
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+/* легкий hover на картку  */
+.gallery-item:hover {
+  border-color: #000;
+}
+
+.load-more {
+  display: block;
+  margin: 0 auto 24px;
+  width: 125px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background: #4e75ff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.load-more:hover {
+  background: #6c8cff;
+}
+
+.is-hidden {
+  display: none;
+}
+
+/* loader по центру під кнопкою */
+.loader {
+  margin: 0 auto 24px;
+}
+
+/* ===== LOADER ===== */
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  margin: 24px auto 24px;
+  color: #2e2f42;
+  font-size: 16px;
+}
+
+.loader-text {
+  margin: 0;
+}
+
+/* простий спінер */
+.loader-spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #d9d9d9;
+  border-top-color: #4e75ff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.is-hidden {
+  display: none;
+}
+
